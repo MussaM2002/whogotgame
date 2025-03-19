@@ -1,1 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who Got Game?</title>
+    <style>
+        /* Importing Cool Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;700&display=swap');
 
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Oswald', sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background-image: url('your-header-image.jpg'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        header h1 {
+            font-size: 80px;
+            color: gold;
+            text-transform: uppercase;
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 15px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: gold;
+            text-decoration: none;
+            font-size: 20px;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 100px 20px;
+            text-align: center;
+            border-radius: 20px;
+            margin: 50px auto;
+            width: 80%;
+            background: linear-gradient(145deg, gold, white);
+            color: black;
+            box-shadow: 5px 5px 15px rgba(255, 215, 0, 0.5);
+        }
+
+        .section img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: black;
+            color: gold;
+            margin-top: 50px;
+        }
+
+        /* Smooth Scrolling Effect */
+        html {
+            scroll-behavior: smooth;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#goatdebate">GOAT Debate</a>
+        <a href="#mvpdebate">MVP Debate</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Who Got Game?</h1>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>About This Site</h2>
+        <p>Dive deep into the biggest debates in basketball history. Compare stats, discuss legends, and vote on the greatest players.</p>
+        <img src="about-image.jpg" alt="Basketball History">
+    </section>
+
+    <!-- GOAT Debate Section -->
+    <section id="goatdebate" class="section">
+        <h2>GOAT Debate</h2>
+        <p>Jordan, LeBron, Kareem? Who really is the greatest of all time? Join the debate.</p>
+        <img src="goatdebate-image.jpg" alt="GOAT Debate">
+    </section>
+
+    <!-- MVP Debate Section -->
+    <section id="mvpdebate" class="section">
+        <h2>MVP Debate</h2>
+        <p>Who deserves the MVP this season? Vote now and see where your favorite players rank.</p>
+        <img src="mvpdebate-image.jpg" alt="MVP Debate">
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Want to collaborate or have suggestions? Reach out to us.</p>
+        <img src="contact-image.jpg" alt="Contact Us">
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Who Got Game? All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
