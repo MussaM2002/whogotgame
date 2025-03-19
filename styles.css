@@ -25,3 +25,18 @@ nav a {
 .header-container {
     padding-top: 80px; /* Push content down so it doesn't overlap */
 }
+/* Make sure the navbar is always on top */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000; /* Ensures navbar is above all sections */
+}
+
+/* If header is overlapping, push content down */
+.header-container {
+    padding-top: 120px; /* Ensures navbar isn't hidden */
+}
