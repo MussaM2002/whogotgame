@@ -1,0 +1,27 @@
+/* Navbar Fix */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000; /* Ensures navbar stays on top */
+}
+
+/* Ensure links are clickable */
+nav a {
+    color: gold;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 0 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative; /* Fixes stacking issues */
+    z-index: 1001;
+}
+
+/* Fix if another section is covering the navbar */
+.header-container {
+    padding-top: 80px; /* Push content down so it doesn't overlap */
+}
