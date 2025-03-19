@@ -1,1 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOAT Debate - Who Got Game?</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Press+Start+2P&display=swap');
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Anton', sans-serif;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 15px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: gold;
+            text-decoration: none;
+            font-size: 24px;
+            margin: 0 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        .header-container {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header-title {
+            font-size: 100px;
+            color: gold;
+            text-shadow: 5px 5px 10px rgba(255, 215, 0, 0.7);
+            text-transform: uppercase;
+        }
+
+        .section {
+            width: 80%;
+            margin: 100px auto;
+            padding: 50px;
+            border-radius: 20px;
+            background: linear-gradient(145deg, gold, white);
+            box-shadow: 10px 10px 20px rgba(255, 215, 0, 0.6);
+            text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s ease-out;
+        }
+
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section h2 {
+            font-size: 50px;
+            color: black;
+            text-transform: uppercase;
+        }
+
+        .section p {
+            font-size: 30px;
+            color: black;
+            width: 33%;
+            margin: auto;
+        }
+
+        .vote-container {
+            margin-top: 20px;
+        }
+
+        .vote-container button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            background-color: black;
+            color: gold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .vote-container button:hover {
+            background-color: gold;
+            color: black;
+        }
+
+        footer {
+            padding: 20px;
+            background: black;
+            color: gold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="mvpdebate.html">MVP Debate</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="header-container">
+        <h1 class="header-title">GOAT Debate</h1>
+    </div>
+
+    <section class="section">
+        <h2>Who is the GOAT?</h2>
+        <p>The greatest debate in basketball history: Jordan, LeBron, Kareem, or someone else?</p>
+        <div class="vote-container">
+            <button onclick="vote('Jordan')">Michael Jordan</button>
+            <button onclick="vote('LeBron')">LeBron James</button>
+            <button onclick="vote('Kareem')">Kareem Abdul-Jabbar</button>
+            <button onclick="vote('Other')">Other</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Who Got Game? All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function vote(player) {
+            alert("You voted for " + player + " as the GOAT!");
+        }
+
+        const sections = document.querySelectorAll('.section');
+        function revealSections() {
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < window.innerHeight - 100) {
+                    section.classList.add('show');
+                }
+            });
+        }
+        window.addEventListener('scroll', revealSections);
+        revealSections();
+    </script>
+
+</body>
+</html>
